@@ -1,0 +1,15 @@
+<?php
+
+$payment = $block->getOrder()->getPayment();
+$method = $payment->getMethodInstance()->getCode();
+?>
+<?php //if ($method == Banktransfer::PAYMENT_METHOD_BANKTRANSFER_CODE) :?>
+<div class="admin__page-section-item-content">
+    <strong><?php echo __('Partial Payment:') ?></strong>
+    <span class="price"><?php echo $payment->getData('custom_payment');
+
+
+
+    ?></span>                        
+</div>
+<?php //endif; ?>
